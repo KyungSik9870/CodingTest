@@ -13,11 +13,58 @@ import java.util.Scanner;
  * 첫 번째 줄에 반 학생 수 N(1<=N<=20)과 M(1<=M<=10)이 주어진다.
  * 두 번째 줄부터 M개의 줄에 걸쳐 수학테스트 결과가 학생번호로 주어진다. 학생번호가 제일 앞에서부터 1등, 2등, ...N등 순으로 표현된다.
  * 만약 한 줄에 N=4이고, 테스트 결과가 3 4 1 2로 입력되었다면 3번 학생이 1등, 4번 학생이 2등, 1번 학생이 3등, 2번 학생이 4등을 의미합니다.
+ *
+ * 예시
+ * 4 3
+ * 3 4 1 2
+ * 4 3 2 1
+ * 3 1 4 2
+ *
+ * -> 3
+ * (3, 1), (3, 2), (4, 2)와 같이 3가지 경우의 (멘토, 멘티) 짝을 만들 수 있다.
  */
 public class Mentor {
-	public static void main(String[] args) {
-	    Scanner scanner = new Scanner(System.in);
-	    Mentor mentor = new Mentor();
+	public int solution(int n, int m, int[][] inputs) {
+		int answer = 0;
+		for (int i = 1; i <= n; i++) {
+			for (int j = 1; j <= n; j++) {
+				int count = 0;
+				for (int k = 0; k < m; k++) {
+					int rank1 = 0;
+					int rank2 = 0;
+					for (int h = 0; h < n; h++) {
+						if (inputs[k][h] == i) {
+							rank1 = h;
+						}
+						if (inputs[k][h] == j) {
+							rank2 = h;
+						}
+					}
+					if (rank1 < rank2) {
+						count++;
+					}
+				}
+				if (count == m) {
+					answer++;
+				}
+			}
+		}
+		return answer;
+	}
 
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		Mentor mentor = new Mentor();
+		int n = scanner.nextInt();
+		int m = scanner.nextInt();
+		int[][] inputs = new int[m][n];
+
+		for (int i = 0; i < m; i++) {
+			for (int j = 0; j < n; j++) {
+				inputs[i][j] = scanner.nextInt();
+			}
+		}
+
+		System.out.println(mentor.solution(n, m, inputs));
 	}
 }
