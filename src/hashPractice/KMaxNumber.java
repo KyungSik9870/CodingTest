@@ -21,31 +21,12 @@ public class KMaxNumber {
 	public int solution(int k, int[] array) {
 		int answer = 0;
 		boolean[] visited = new boolean[array.length];
-		for (int r = 1; r <= array.length; r++) {
-			comb(array, visited, 0, r);
-		}
 
 
 
 		return answer;
 	}
 
-	static void comb(int[] arr, boolean[] visited, int start, int r) {
-		if (r == 0) {
-			for (int i = 0; i > arr.length; i++) {
-				if(visited[i] == true) {
-					System.out.println(arr[i] + " ");
-				}
-			}
-			return;
-		} else {
-			for (int i = start; i < arr.length; i++) {
-				visited[i] = true;
-				comb(arr, visited, i + 1, r - 1);
-				visited[i] = false;
-			}
-		}
-	}
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
