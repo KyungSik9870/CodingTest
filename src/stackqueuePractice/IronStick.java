@@ -38,24 +38,24 @@ public class IronStick {
 	 * @return
 	 */
 	public int solution(String arrangement) {
-        int answer = 0;
-        Stack<Character> stack = new Stack<Character>();
-        
-        for(int i=0;i<arrangement.length();i++) {
-        	switch(arrangement.charAt(i)) {
-        	case '(':
-        		stack.push(arrangement.charAt(i));
-        		break;
-        	case ')':
-        		stack.pop();
-    			if(arrangement.charAt(i-1)=='(') {
-    				answer += stack.size();
-    			}else {
-    				answer++;
-    			}
-        		break;
-        	}
-        }
-        return answer;
-    }
+		int answer = 0;
+		Stack<Character> stack = new Stack<Character>();
+
+		for (int i = 0; i < arrangement.length(); i++) {
+			switch (arrangement.charAt(i)) {
+				case '(':
+					stack.push(arrangement.charAt(i));
+					break;
+				case ')':
+					stack.pop();
+					if (arrangement.charAt(i - 1) == '(') {
+						answer += stack.size();
+					} else {
+						answer++;
+					}
+					break;
+			}
+		}
+		return answer;
+	}
 }
