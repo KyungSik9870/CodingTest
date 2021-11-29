@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class Palindrome {
 
 	public String solution(String str) {
-		String s = str.toLowerCase().replaceAll("[^a-z]","");
+		String s = str.toLowerCase().replaceAll("[^a-z]", "");
 
 		char[] chars = s.toCharArray();
 		for (int i = 0; i < chars.length / 2; i++) {

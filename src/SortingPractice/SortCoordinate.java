@@ -30,12 +30,12 @@ public class SortCoordinate {
 		}
 		Collections.sort(list);
 		for (Coordinate c : list) {
-			System.out.println(c.left+ " "+c.right);
+			System.out.println(c.left + " " + c.right);
 		}
 	}
 }
 
-class Coordinate implements Comparable<Coordinate>{
+class Coordinate implements Comparable<Coordinate> {
 	int left;
 	int right;
 
@@ -46,7 +46,9 @@ class Coordinate implements Comparable<Coordinate>{
 
 	@Override
 	public int compareTo(Coordinate o) {
-		if (this.left == o.left) return this.right - o.right;
-		else return this.left - o.left;
+		if (this.left == o.left)
+			return this.right - o.right;
+		else
+			return this.left - o.left;
 	}
 }

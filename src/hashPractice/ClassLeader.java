@@ -18,16 +18,16 @@ import java.util.Scanner;
  */
 public class ClassLeader {
 
-	public String solution(String input){
+	public String solution(String input) {
 		String answer = "";
 		int max = 0;
 		HashMap<Character, Integer> map = new HashMap<>();
-		for (char c : input.toCharArray()){
-			map.put(c , map.getOrDefault(c, 0) + 1);
+		for (char c : input.toCharArray()) {
+			map.put(c, map.getOrDefault(c, 0) + 1);
 		}
 
 		for (char c : map.keySet()) {
-			if (map.get(c) > max){
+			if (map.get(c) > max) {
 				max = map.get(c);
 				answer = String.valueOf(c);
 			}
@@ -37,10 +37,10 @@ public class ClassLeader {
 	}
 
 	public static void main(String[] args) {
-	    Scanner scanner = new Scanner(System.in);
-	    ClassLeader classLeader = new ClassLeader();
-	    int n = scanner.nextInt();
-	    String input = scanner.next();
+		Scanner scanner = new Scanner(System.in);
+		ClassLeader classLeader = new ClassLeader();
+		int n = scanner.nextInt();
+		String input = scanner.next();
 		System.out.println(classLeader.solution(input));
 	}
 }

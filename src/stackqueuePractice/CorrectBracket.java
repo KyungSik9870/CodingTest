@@ -32,13 +32,13 @@ public class CorrectBracket {
 			if (c == '(') {
 				stack.push(c);
 			} else {
-				if (stack.isEmpty()){
+				if (stack.isEmpty()) {
 					return false;
 				}
 				stack.pop();
 			}
 		}
-		if (!stack.isEmpty()){
+		if (!stack.isEmpty()) {
 			return false;
 		}
 

@@ -15,7 +15,8 @@ public class DecimalNumber {
 		}
 
 		for (int i = 2; i <= n; i++) {
-			if (temp[i] == 0) continue;
+			if (temp[i] == 0)
+				continue;
 			for (int j = 2 * i; j <= n; j += i) {
 				temp[j] = 0;
 			}

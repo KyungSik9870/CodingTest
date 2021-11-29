@@ -12,7 +12,7 @@ public class RemoveDuplicated {
 	public String solution(String str) {
 		StringBuilder stringBuilder = new StringBuilder();
 		for (String s : str.split("")) {
-			if(stringBuilder.indexOf(s) == -1){
+			if (stringBuilder.indexOf(s) == -1) {
 				stringBuilder.append(s);
 			}
 		}

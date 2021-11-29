@@ -59,7 +59,7 @@ public class SalesType {
 			input[i] = scanner.nextInt();
 		}
 		for (int a : salesType.solution(n, k, input)) {
-			System.out.print(a+ " ");
+			System.out.print(a + " ");
 		}
 	}
 }

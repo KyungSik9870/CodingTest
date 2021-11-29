@@ -31,7 +31,7 @@ public class Anagram {
 		}
 
 		for (char c : aMap.keySet()) {
-			if (aMap.get(c) != bMap.get(c)){
+			if (aMap.get(c) != bMap.get(c)) {
 				answer = "NO";
 				break;
 			}
@@ -41,10 +41,10 @@ public class Anagram {
 	}
 
 	public static void main(String[] args) {
-	    Scanner scanner = new Scanner(System.in);
-	    Anagram anagram = new Anagram();
-	    String a = scanner.nextLine();
-	    String b = scanner.nextLine();
+		Scanner scanner = new Scanner(System.in);
+		Anagram anagram = new Anagram();
+		String a = scanner.nextLine();
+		String b = scanner.nextLine();
 		System.out.println(anagram.solution(a, b));
 	}
 }

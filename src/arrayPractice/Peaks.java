@@ -11,8 +11,8 @@ public class Peaks {
 
 	public int solution(int n, int[][] inputs) {
 		int answer = 0;
-		for (int i = 1; i <= n ; i++) {
-			for (int j = 1; j <= n ; j++) {
+		for (int i = 1; i <= n; i++) {
+			for (int j = 1; j <= n; j++) {
 				if (inputs[i][j] > inputs[i][j + 1] && inputs[i][j] > inputs[i + 1][j]
 					&& inputs[i][j] > inputs[i][j - 1] && inputs[i][j] > inputs[i - 1][j]) {
 					answer++;

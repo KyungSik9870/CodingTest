@@ -22,7 +22,7 @@ public class CalculateScore {
 		int count = 0;
 
 		for (int i = 0; i < inputs.length; i++) {
-			if (inputs[i] == 1){
+			if (inputs[i] == 1) {
 				count++;
 				answer += count;
 			} else {

@@ -42,8 +42,10 @@ public class Emergency {
 				}
 			}
 			if (tempPerson != null) {
-				if(tempPerson.id == m) return answer;
-				else answer++;
+				if (tempPerson.id == m)
+					return answer;
+				else
+					answer++;
 			}
 		}
 

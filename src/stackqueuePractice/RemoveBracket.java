@@ -19,13 +19,14 @@ public class RemoveBracket {
 		Stack<Character> stack = new Stack<>();
 		for (char c : s.toCharArray()) {
 			if (c == ')') {
-				while (stack.pop() != '(');
+				while (stack.pop() != '(')
+					;
 			} else {
 				stack.push(c);
 			}
 		}
 
-		for (char c : stack){
+		for (char c : stack) {
 			answer += c + "";
 		}
 

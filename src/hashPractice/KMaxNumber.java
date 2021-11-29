@@ -22,11 +22,8 @@ public class KMaxNumber {
 		int answer = 0;
 		boolean[] visited = new boolean[array.length];
 
-
-
 		return answer;
 	}
-
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);

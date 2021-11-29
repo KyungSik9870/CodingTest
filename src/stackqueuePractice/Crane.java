@@ -19,7 +19,7 @@ public class Crane {
 
 					if (!stack.isEmpty() && target == stack.peek()) {
 						stack.pop();
-						answer+=2;
+						answer += 2;
 					} else {
 						stack.push(target);
 					}

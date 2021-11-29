@@ -32,7 +32,7 @@ public class EncryptString {
 	public String solution(String str) {
 		String answer = "";
 		for (int i = 0; i < str.length(); i += 7) {
-			String s = str.substring(i, i+7);
+			String s = str.substring(i, i + 7);
 			s = s.replaceAll("#", "1");
 			s = s.replaceAll("[*]", "0");
 			char c = (char)Integer.parseInt(s, 2);

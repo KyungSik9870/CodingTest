@@ -10,7 +10,7 @@ public class RockPaperScissors {
 
 	public void solution(int n, int[] inputA, int[] inputB) {
 		for (int i = 0; i < n; i++) {
-			if (inputA[i] == inputB[i]){
+			if (inputA[i] == inputB[i]) {
 				System.out.println("D");
 			} else if (inputA[i] == 1 && inputB[i] == 3) {
 				System.out.println("A");
