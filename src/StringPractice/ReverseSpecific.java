@@ -9,18 +9,24 @@ import java.util.Scanner;
 public class ReverseSpecific {
 
 	public String solution(String str) {
-		char[] strArray = str.toCharArray();
-		char[] answerArray = new char[strArray.length];
-
-		for (int i = 0; i < strArray.length; i++) {
-			if (Character.isAlphabetic(strArray[i])) {
-				answerArray[strArray.length - i - 1] = strArray[i];
+		String answer = "";
+		char[] s = str.toCharArray();
+		int lt = 0, rt = str.length() - 1;
+		while (lt < rt) {
+			if (!Character.isAlphabetic(s[lt])) {
+				lt++;
+			} else if (!Character.isAlphabetic(s[rt])) {
+				rt--;
 			} else {
-				answerArray[i] = strArray[i];
+				char tmp = s[lt];
+				s[lt] = s[rt];
+				s[rt] = tmp;
+				lt++;
+				rt--;
 			}
+			answer = String.valueOf(s);
 		}
-
-		return String.valueOf(answerArray);
+		return answer;
 	}
 
 	public static void main(String[] args) {
