@@ -1,4 +1,4 @@
-package StringPractice;
+package stringPractice;
 
 /**
  * [문자열 압축]
