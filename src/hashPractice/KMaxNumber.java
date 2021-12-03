@@ -1,6 +1,8 @@
 package hashPractice;
 
+import java.util.Collections;
 import java.util.Scanner;
+import java.util.TreeSet;
 
 /**
  * [K번째 큰 수]
@@ -19,9 +21,22 @@ import java.util.Scanner;
 public class KMaxNumber {
 
 	public int solution(int k, int[] array) {
-		int answer = 0;
-		boolean[] visited = new boolean[array.length];
-
+		int answer = -1;
+		TreeSet<Integer> temp = new TreeSet<>(Collections.reverseOrder());
+		for (int i = 0; i < array.length; i++) {
+			for (int j = i + 1; j < array.length; j++) {
+				for (int f = j + 1; f < array.length; f++) {
+					temp.add(array[i] + array[j] + array[f]);
+				}
+			}
+		}
+		int count = 0;
+		for (int x : temp) {
+			count++;
+			if (count == k) {
+				return x;
+			}
+		}
 		return answer;
 	}
 
